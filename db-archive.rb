@@ -1,11 +1,3 @@
-# Usage: bundle exec ruby db_backup_runner.rb /path/to/config.yml
-#
-# From cron: /bin/bash -l -c 'cd /path/to/backup_runner/ && bundle exec ruby backup_runner.rb /path/to/config.yml' >> /path/to/log.log 2>&1
-#
-# This will dump the specific database to gzipped sql file,
-# clean up old dumps, and then upload the new dump to the 
-# specified Rackspace container
-
 require 'database_backup'
 require 'rackspace_uploader'
 
