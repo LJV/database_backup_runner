@@ -4,4 +4,5 @@ db_name: database_name
 backup_dir: /path/to/folder/to/contain/backup/folders    # Careful, files may be removed from this directory
 rackspace_username: rackspace_username
 rackspace_api_key: rackspace_api_key
+rackspace_region: :ord
 rackspace_container: rackspace_container

@@ -14,7 +14,7 @@ result = b.cleanup!
 puts "#{Time.now}: Deleted #{result[:deleted_backups]} backups, #{result[:remaining_backups]} backups remaining" 
 puts "#{Time.now}: Uploading #{dump_file} to #{File.basename(dump_file)}..."
 
-u = LJV::RackspaceUploader.new(:username => CONFIG['rackspace_username'], :api_key => CONFIG['rackspace_api_key'])
+u = LJV::RackspaceUploader.new(:username => CONFIG['rackspace_username'], :api_key => CONFIG['rackspace_api_key'], :region => CONFIG['rackspace_region'])
 u.upload(dump_file, CONFIG['rackspace_container'], File.basename(dump_file))
 
 puts "#{Time.now}: Upload complete"
